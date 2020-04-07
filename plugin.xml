@@ -48,6 +48,9 @@
 
     <!-- android -->
     <platform name="android">
+        <edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
+            <application android:usesCleartextTraffic="true" />
+        </edit-config>
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Camera">
                 <param name="android-package" value="org.apache.cordova.camera.CameraLauncher"/>
@@ -151,12 +154,12 @@
         <js-module src="www/CameraPopoverHandle.js" name="CameraPopoverHandle">
             <clobbers target="CameraPopoverHandle" />
         </js-module>
-        
+
         <header-file src="src/osx/CDVCamera.h" />
         <source-file src="src/osx/CDVCamera.m" />
-                
+
         <framework src="Quartz.framework" />
         <framework src="AppKit.framework" />
     </platform>
-    
+
 </plugin>
