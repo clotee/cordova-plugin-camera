@@ -48,9 +48,9 @@
 
     <!-- android -->
     <platform name="android">
-        <edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
-            <application android:usesCleartextTraffic="true" />
-        </edit-config>
+<!--        <edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">-->
+<!--            <application android:usesCleartextTraffic="true" />-->
+<!--        </edit-config>-->
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Camera">
                 <param name="android-package" value="org.apache.cordova.camera.CameraLauncher"/>
